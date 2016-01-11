@@ -1,14 +1,42 @@
-.container {
-  width: 70%;
-}
+/*header*/
 
 header  {
   text-align: center;
   margin: auto;
   border: 4px solid #FFFFFF;
-  width: 50%;
+  width: 70%;
   margin-bottom: 40px;
+  clear: both;
 }
+
+.btn {
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+  padding: 5px;
+  background: none;
+}
+
+.btn:hover {
+  background: #7FB7BE;
+}
+
+.btn:active {
+  background: #F73D45;
+}
+
+#users-login button{
+  font-size: 0.9em;
+}
+
+
+#users-login li {
+  list-style-type: none;
+  float: right;
+  margin: 0 0 5px 10px;
+}
+
+/*body*/
 
 body {
   text-align: center;
@@ -16,8 +44,78 @@ body {
   color: #FFFFFF;
 }
 
+.container {
+  width: 70%;
+  margin: auto;
+}
+
 .raks {
+  border: 2px solid #FFFFFF;
+  width: 60%;
+  margin: auto;
+  padding: 15px;
+  height: auto;
+  font-size: 1.4em;
+  vertical-align: middle;
+}
+
+.rak {
+  height: 105px;
+}
+
+
+/*signup form*/
+
+
+
+.form-control input, input[placeholder] {
+  text-align: center;
+  font-size: 1em;
+}
+
+.form-control {
+  padding: 7px 0 7px 0;
+  margin-bottom: 10px;
+}
+
+.form-btn {
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+  padding: 5px;
+  background: none;
+  padding: 5px 15px 5px 15px;
+  font-size: 1em;
+}
+
+
+#signup-form {
   border: 2px solid #FFFFFF;
   width: 50%;
   margin: auto;
+  padding: 15px 15px 25px 15px;
+  margin-top: 15px;
+  display: none;
+}
+
+#login-form {
+  clear: both;
+  border: 2px solid #FFFFFF;
+  width: 50%;
+  margin: auto;
+  padding: 15px 15px 25px 15px;
+  margin-top: 15px;
+  display: none;
+}
+
+.cancel {
+  float: right;
+}
+
+#login-form h2 {
+  clear: both;
+}
+
+#signup-form h2 {
+  clear: both;
 }

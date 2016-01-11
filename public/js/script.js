@@ -20,5 +20,28 @@ $(document).ready(function() {
     })();
   });
 
+  $('#signup').on('click', function(event){
+     event.preventDefault();
+     $(".raks").hide();
+     $("#signup-form").show();
+   });
+
+   $('#signup-cancel').on('click', function(){
+      event.preventDefault();
+      $("#signup-form").hide();
+      $(".raks").show();
+    });
+
+    $('#login').on('click', function(event){
+       event.preventDefault();
+       $(".raks").hide();
+       $("#login-form").show();
+     });
+
+     $('#login-cancel').on('click', function(){
+        event.preventDefault();
+        $("#login-form").hide();
+        $(".raks").show();
+      });
 
 });
