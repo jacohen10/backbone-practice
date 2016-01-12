@@ -14,15 +14,17 @@
   <div id="users-login">
     <ul>
     {{#if currentUser}}
-      <li><button class="btn" id="logout">Logout</button></li>
-      <li><button class="btn" id="secret">Secret page</button></li>
+      <li><a class="btn" href="/logout">Logout</a></li>
+      <li><a class="btn" id="secret">Secret page</a></li>
     {{else}}
       <li><button class="btn" id="login">Login</button></li>
       <li><button class="btn" id="signup">Signup</button></li>
     {{/if}}
     </ul>
   </div>
-
+  {{#if message}}
+    <div class="alert alert-danger">{{message}}</div>
+  {{/if}}
   <div class="container">
     <header>
       <h1>Streaks of Kindness</h1>
