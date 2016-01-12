@@ -112,6 +112,14 @@ body {
   float: right;
 }
 
+.cancel:hover {
+  background: #7FB7BE;
+}
+
+.cancel:active {
+  background: #F73D45;
+}
+
 #login-form h2 {
   clear: both;
 }

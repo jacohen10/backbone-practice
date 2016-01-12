@@ -5,15 +5,30 @@ function getSignup(request, response) {
 }
 
 // POST /signup
-function postSignup(request, response) {
-}
+ function postSignup(request, response) {
+    var signupStrategy = passport.authenticate('local-signup', {
+      successRedirect : '/',
+      failureRedirect : '/signup',
+      failureFlash : true
+    });
 
-// GET /login
-function getLogin(request, response) {
-}
+    return signupStrategy(request, response);
+  }
 
 // POST /login
 function postLogin(request, response) {
+    var loginProperty = passport.authenticate('local-login', {
+      successRedirect : '/',
+      failureRedirect : '/login',
+      failureFlash : true
+    });
+
+    return loginProperty(request, response);
+  }
+
+// GET /login
+function getLogin(request, response) {
+  
 }
 
 // GET /logout

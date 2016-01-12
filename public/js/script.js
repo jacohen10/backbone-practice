@@ -23,6 +23,7 @@ $(document).ready(function() {
   $('#signup').on('click', function(event){
      event.preventDefault();
      $(".raks").hide();
+     $("#login-form").hide();
      $("#signup-form").show();
    });
 
@@ -35,6 +36,7 @@ $(document).ready(function() {
     $('#login').on('click', function(event){
        event.preventDefault();
        $(".raks").hide();
+       $("#signup-form").hide();
        $("#login-form").show();
      });
 
