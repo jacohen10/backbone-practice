@@ -4,33 +4,37 @@
 <head>
   <title>Streaks of Kindess</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/underscore/underscore-min.js"></script>
   <script src="bower_components/handlebars/handlebars.min.js"></script>
   <script src="bower_components/backbone/backbone-min.js"></script>
-
-
-  <script src="js/models/rak.js"></script>
-  <script src="js/views/rakView.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/models/rak.js"></script>
+  <script src="js/collections/raks.js"></script>
+  <script src="js/views/rakView.js"></script>
+  <script src="js/views/rak.js"></script>
+
 </head>
 
 <body>
   <div id="users-login">
     <ul>
-    {{#if currentUser}}
+      {{#if currentUser}}
       <li><a class="btn" href="/logout">Logout</a></li>
       <li><a class="btn" id="secret">Secret page</a></li>
-    {{else}}
-      <li><button class="btn" id="login">Login</button></li>
-      <li><button class="btn" id="signup">Signup</button></li>
-    {{/if}}
+      {{else}}
+      <li>
+        <button class="btn" id="login">Login</button>
+      </li>
+      <li>
+        <button class="btn" id="signup">Signup</button>
+      </li>
+      {{/if}}
     </ul>
   </div>
   {{#if message}}
-    <div class="alert alert-danger">{{message}}</div>
+  <div class="alert alert-danger">{{message}}</div>
   {{/if}}
   <div class="container">
     <header>
@@ -39,8 +43,10 @@
     <div class="raks"></div>
 
     <!-- signup form -->
-      <div id="signup-form">
-        <div class="cancel" id="signup-cancel"><button class="form-btn" type="button" name="button">X</button></div>
+    <div id="signup-form">
+      <div class="cancel" id="signup-cancel">
+        <button class="form-btn" type="button" name="button">X</button>
+      </div>
       <h2>Signup</h2>
       <form method="post" action="/signup">
         <div class="form-group">
@@ -52,23 +58,31 @@
         </div>
         <button class="form-btn" id="submit-btn" type="submit">Submit</button>
       </form>
-      </div>
+    </div>
 
     <!-- login form -->
-      <div id="login-form">
-        <div class="cancel" id="login-cancel"><button class="form-btn" type="button" name="button">X</button></div>
-    <h2>Login</h2>
-    <form method="post" action="/login">
-      <div class="form-group">
-        <input class="form-control" type="text" name="email" id="email" placeholder="email">
+    <div id="login-form">
+      <div class="cancel" id="login-cancel">
+        <button class="form-btn" type="button" name="button">X</button>
       </div>
+      <h2>Login</h2>
+      <form method="post" action="/login">
+        <div class="form-group">
+          <input class="form-control" type="text" name="email" id="email" placeholder="email">
+        </div>
 
-      <div class="form-group">
-        <input class="form-control" type="password" name="password" id="password" placeholder="password">
-      </div>
-      <input class="form-btn" type="submit">
-    </form>
-  </div>
+        <div class="form-group">
+          <input class="form-control" type="password" name="password" id="password" placeholder="password">
+        </div>
+        <input class="form-btn" type="submit">
+      </form>
+    </div>
+
+    <script id="rakTemplate" type="text/x-handlebars-template">
+      <h2>{{ body }}
+        <span class='delete'>(X)</span>
+      </h2>
+    </script>
 </body>
 
 </html>

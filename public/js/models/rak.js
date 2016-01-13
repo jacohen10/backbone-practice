@@ -1,11 +1,10 @@
-(function(){
   App.Models.Rak = Backbone.Model.extend({
     urlRoot: "/raks",
     initialize: function(){
       console.log("New Rak Model Created");
     }
   });
-})();
+
 
 
 // var Rak = function(info){
