@@ -13,7 +13,18 @@ $(document).ready(function() {
       var rakView = new App.Views.Rak({model: rak});
       $('.raks').append(rakView.$el);
     });
+var divs = $('.rak').hide(),
+  i = 0;
 
+(function cycle() {
+
+  divs.eq(i).fadeIn(400)
+    .delay(2500)
+    .fadeOut(400, cycle);
+
+  i = ++i % divs.length;
+
+})();
   });
 
   // Rak.fetch().then(function(raks) {
@@ -23,18 +34,7 @@ $(document).ready(function() {
   //
   //   });
   //   console.log($('.rak').length);
-  //   var divs = $('.rak').hide(),
-  //     i = 0;
-  //
-  //   (function cycle() {
-  //
-  //     divs.eq(i).fadeIn(400)
-  //       .delay(2500)
-  //       .fadeOut(400, cycle);
-  //
-  //     i = ++i % divs.length;
-  //
-  //   })();
+
   // });
 
   //

@@ -4,16 +4,16 @@
 <head>
   <title>Streaks of Kindess</title>
   <link rel="stylesheet" href="style.css">
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/underscore/underscore-min.js"></script>
   <script src="bower_components/handlebars/handlebars.min.js"></script>
   <script src="bower_components/backbone/backbone-min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/models/rak.js"></script>
-  <script src="js/collections/raks.js"></script>
-  <script src="js/views/rakView.js"></script>
-  <script src="js/views/rak.js"></script>
+  <script src="js/backbone/models/rak.js"></script>
+  <script src="js/backbone/collections/raks.js"></script>
+  <script src="js/backbone/views/rakView.js"></script>
+  <script src="js/backbone/views/rak.js"></script>
 
 </head>
 
@@ -79,9 +79,7 @@
     </div>
 
     <script id="rakTemplate" type="text/x-handlebars-template">
-      <h2>{{ body }}
-        <span class='delete'>(X)</span>
-      </h2>
+      <h2>{{body}}</h2>
     </script>
 </body>
 

@@ -20,6 +20,7 @@ App.Views.Rak = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
+    // this.$el.html("<h2>"+ this.model.toJSON().body + "</h2>")
   }
 
 });
